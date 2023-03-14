@@ -1,18 +1,25 @@
 import "./index.css";
 import { useState } from "react";
 
-const FullInput = ({ setList }) => {
+const FullInput = ({ setList, list }) => {
   const onHandleClick = (e) => {
     e.preventDefault();
-    console.log(value);
-    setList((prev) => [
-      ...prev,
-      {
-        id: prev.length + 1,
-        content: value,
-        isCompleted: false,
-      },
-    ]);
+    if (
+      list.find((item) => item.content.toLowerCase() === value.toLowerCase())
+    ) {
+      alert("La task che stai tentando di inserire è già aggiunta!");
+      console.log("trovata!");
+      setList((prev) => prev);
+    } else {
+      setList((prev) => [
+        ...prev,
+        {
+          id: prev.length + 1,
+          content: value,
+          isCompleted: false,
+        },
+      ]);
+    }
     e.target[0].value = "";
   };
 
