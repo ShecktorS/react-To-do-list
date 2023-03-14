@@ -4,6 +4,9 @@
 
 .App h3 {
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .listContent {
@@ -16,5 +19,5 @@
   border-radius: 30px;
   margin-top: 40px;
   width: 100vw;
-  height: 80vh;
+  height: 70vh;
 }
