@@ -6,23 +6,30 @@ const FullInput = ({ setList, list }) => {
   const onHandleClick = (e) => {
     e.preventDefault();
 
-    if (
-      list.find((item) => item.content.toLowerCase() === value.toLowerCase())
-    ) {
-      alert("La task che stai tentando di inserire è già aggiunta!");
-      console.log("trovata!");
-      setList((prev) => prev);
+    if (value[0] !== " " && value !== "" && value.length > 3) {
+      if (
+        list.find((item) => item.content.toLowerCase() === value.toLowerCase())
+      ) {
+        alert("La task che stai tentando di inserire è già aggiunta!");
+        console.log("trovata!");
+        setList((prev) => prev);
+      } else {
+        setList((prev) => [
+          ...prev,
+          {
+            id: prev.length + 1,
+            content: value,
+            isCompleted: false,
+          },
+        ]);
+      }
+      setValue("");
+      e.target[0].value = "";
     } else {
-      setList((prev) => [
-        ...prev,
-        {
-          id: prev.length + 1,
-          content: value,
-          isCompleted: false,
-        },
-      ]);
+      alert(
+        "Stai tentando di inserire una task non valida o già presente! Per favore, ripulisci il campo e riprova..."
+      );
     }
-    e.target[0].value = "";
   };
 
   const getValue = (e) => setValue(e.target.value);
