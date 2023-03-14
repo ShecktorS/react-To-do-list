@@ -1,15 +1,39 @@
 .FullInput {
-  border: solid red 2px;
   box-sizing: border-box;
   height: 100px;
-  width: 300px;
+  width: 85vw;
   margin: 5px;
-  display: flex;
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .FullInput input:nth-child(1) {
+  height: 40px;
+  width: 80%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
 }
-.FullInput input:nth-child(2) {
-  width: 80px;
+.FullInput button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.FullInput > * {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.35);
+}
+
+.addSymbol {
+  color: white;
 }

@@ -1,9 +1,11 @@
 import "./index.css";
 import { useState } from "react";
+import { GrFormAdd } from "react-icons/gr";
 
 const FullInput = ({ setList, list }) => {
   const onHandleClick = (e) => {
     e.preventDefault();
+
     if (
       list.find((item) => item.content.toLowerCase() === value.toLowerCase())
     ) {
@@ -36,7 +38,9 @@ const FullInput = ({ setList, list }) => {
         placeholder="Inserisci la task 😊"
         onChange={getValue}
       />
-      <input type="submit" value="+" />
+      <button type="submit">
+        <GrFormAdd className="addSymbol" />
+      </button>
     </form>
   );
 };

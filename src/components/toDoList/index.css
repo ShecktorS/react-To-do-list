@@ -1,6 +1,10 @@
 .ToDoList {
-  border: solid blue 1px;
   margin: 20px;
   height: 300px;
   overflow: auto;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
