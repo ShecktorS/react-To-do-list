@@ -9,7 +9,7 @@ const ToDoList = ({ list, setList }) => {
         .map((todo, i) => (
           <ToDoItem todo={todo} key={i} setList={setList} />
         ))}
-      {list.length < 1 && <p>Nella lista non è presente alcun elemento!</p>}
+      {list.length < 1 && <p>Nella lista non è presente alcuna task!</p>}
     </ul>
   );
 };
