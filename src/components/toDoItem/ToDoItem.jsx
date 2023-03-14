@@ -1,6 +1,7 @@
 import "./index.css";
 
-const ToDoItem = ({ todo }) => {
+const ToDoItem = ({ todo, setList }) => {
+  console.log(todo);
   return (
     <li className="ToDoItem">
       <p>{todo.isCompleted ? "✅" : "◻️"}</p>

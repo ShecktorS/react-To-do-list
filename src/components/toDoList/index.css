@@ -1,4 +1,6 @@
 .ToDoList {
   border: solid blue 1px;
   margin: 20px;
+  height: 300px;
+  overflow: auto;
 }
