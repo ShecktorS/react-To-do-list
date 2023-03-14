@@ -5,3 +5,15 @@
   align-items: center;
   gap: 10px;
 }
+
+.deleted {
+  text-decoration: line-through;
+}
+
+.deleteTodo {
+  cursor: pointer;
+}
+
+.box {
+  cursor: pointer;
+}
