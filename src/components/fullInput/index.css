@@ -1,0 +1,15 @@
+.FullInput {
+  border: solid red 2px;
+  box-sizing: border-box;
+  height: 100px;
+  width: 300px;
+  margin: 5px;
+  display: flex;
+  padding: 10px;
+}
+
+.FullInput input:nth-child(1) {
+}
+.FullInput input:nth-child(2) {
+  width: 80px;
+}

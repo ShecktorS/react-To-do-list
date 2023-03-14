@@ -1,2 +1,7 @@
 .ToDoItem {
+  list-style-type: none;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

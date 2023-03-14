@@ -3,8 +3,8 @@ import "./index.css";
 const ToDoItem = ({ todo }) => {
   return (
     <li className="ToDoItem">
-      <p>{todo.content}</p>
       <p>{todo.isCompleted ? "✅" : "◻️"}</p>
+      <p>{todo.content}</p>
     </li>
   );
 };
