@@ -12,16 +12,15 @@ const FullInput = ({ setList, list }) => {
       ) {
         alert("La task che stai tentando di inserire è già aggiunta!");
         console.log("trovata!");
-        setList((prev) => prev);
       } else {
-        setList((prev) => [
-          ...prev,
-          {
-            id: prev.length + 1,
-            content: value,
-            isCompleted: false,
-          },
-        ]);
+        const newTask = {
+          id: list.length + 1,
+          content: value,
+          isCompleted: false,
+        };
+        const newList = [...list, newTask];
+        setList(newList);
+        localStorage.setItem("list", JSON.stringify(newList));
       }
       setValue("");
       e.target[0].value = "";
